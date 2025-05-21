@@ -4,7 +4,6 @@ idf_component_register(SRCS
                             "utils/TempSensor/temp_sensor.c"
                             "utils/CAN/can_driver_utils.c"
                             "utils/CAN/can_transmit_utils.c"
-                            "utils/CAN/can_receive_utils.c"
                     INCLUDE_DIRS 
                             "." 
                             "utils/ADC" 

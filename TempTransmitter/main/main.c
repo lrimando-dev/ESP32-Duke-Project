@@ -7,7 +7,6 @@
 #include "utils/CAN/can_config.h"         // For temperature_queue definition
 #include "utils/CAN/can_driver_utils.h"   // For CAN driver initialization
 #include "utils/CAN/can_transmit_utils.h" // For CAN transmit task
-#include "utils/CAN/can_receive_utils.h"  // For CAN receive task
 
 static const char *TAG_MAIN = "APP_MAIN";
 
@@ -57,14 +56,6 @@ void app_main(void)
                 NULL); // Task handle
     ESP_LOGI(TAG_MAIN, "CAN transmit task created.");
 
-    // Create the CAN receive task (optional, but useful for testing/general utility)
-    xTaskCreate(can_receive_task,
-                "can_receive_task",
-                4096, // Stack size
-                NULL, // Parameters
-                5,    // Priority
-                NULL); // Task handle
-    ESP_LOGI(TAG_MAIN, "CAN receive task created.");
 
     ESP_LOGI(TAG_MAIN, "All tasks created. Application running.");
 }
