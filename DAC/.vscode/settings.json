@@ -5,14 +5,9 @@
   "idf.openOcdConfigs": [
     "board/esp32-wrover-kit-3.3v.cfg"
   ],
-  "idf.portWin": "COM8",
+  "idf.portWin": "COM6",
   "idf.toolsPathWin": "C:\\Espressif",
   "idf.customExtraVars": {
     "IDF_TARGET": "esp32"
-  },
-  "idf.flashType": "UART",
-  "files.associations": {
-    "esp_log.h": "c",
-    "temp_sensor.h": "c"
   }
 }
