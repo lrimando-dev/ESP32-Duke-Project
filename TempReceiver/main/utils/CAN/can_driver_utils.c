@@ -8,10 +8,10 @@ static const char *TAG_CAN_DRIVER = "CAN_DRIVER";
 esp_err_t can_driver_init(void) {
     twai_general_config_t g_config = TWAI_GENERAL_CONFIG_DEFAULT(CAN_TX_GPIO, CAN_RX_GPIO, TWAI_MODE_NORMAL);
 
-    g_config.tx_queue_len = 5;
-    g_config.rx_queue_len = 5;
+    g_config.tx_queue_len = CAN_TX_QUEUE_LENGTH;
+    g_config.rx_queue_len = CAN_RX_QUEUE_LENGTH;
 
-    twai_timing_config_t t_config = TWAI_TIMING_CONFIG_500KBITS();
+    twai_timing_config_t t_config = CAN_TIMIMG;
     twai_filter_config_t f_config = TWAI_FILTER_CONFIG_ACCEPT_ALL();
 
     esp_err_t espStatus = twai_driver_install(&g_config, &t_config, &f_config);

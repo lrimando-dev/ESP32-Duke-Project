@@ -10,21 +10,16 @@
 
 static const char *TAG_MAIN = "APP_MAIN";
 
-// All other functions, global variables, and specific ADC/LM35 defines have been moved.
-
-// Define the temperature queue (declared extern in can_config.h)
 QueueHandle_t temperature_queue = NULL;
 
 void app_main(void)
 {
     ESP_LOGI(TAG_MAIN, "ESP32 LM35 Temperature Sensor with CAN - Main App");
 
-    // Create the temperature data queue
-    // Queue for 10 float values. Adjust size as needed.
     temperature_queue = xQueueCreate(10, sizeof(float)); 
     if (temperature_queue == NULL) {
         ESP_LOGE(TAG_MAIN, "Failed to create temperature queue. Halting.");
-        return; // Or handle error appropriately
+        return;
     }
     ESP_LOGI(TAG_MAIN, "Temperature queue created.");
 

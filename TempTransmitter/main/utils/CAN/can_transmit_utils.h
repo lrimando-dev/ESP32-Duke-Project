@@ -6,4 +6,4 @@
 
 void can_transmit_task(void *pvParameters);
 
-#endif // CAN_TRANSMIT_UTILS_H
+#endif

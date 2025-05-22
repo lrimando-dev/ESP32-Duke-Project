@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "TempTransmitter"
+		},
+		{
+			"path": "TempReceiver"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"esp_log.h": "c",
+			"temp_sensor.h": "c",
+			"*.inc": "c",
+			"can_transmit_utils.h": "c",
+			"can_driver_utils.h": "c"
+		}
+	}
+}
