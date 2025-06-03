@@ -1,0 +1,35 @@
+idf_component_register(
+    SRCS 
+        "main.c"
+        "utils/CLI/cli_interface.c"
+        "utils/CLI/cli_commands.c"
+        "utils/ADC/adc_utils.c"
+        "utils/CAN/can_driver_utils.c"
+        "utils/CAN/can_receive_utils.c"
+        "utils/CAN/can_transmit_utils.c"
+        "utils/TempSensor/temp_sensor.c"
+        "utils/AD5693/ad5693_utils.c"
+        "../TestCases/test_commands.c"
+        "../TestCases/performance_commands.c"
+        "../TestCases/external_commands.c"
+    INCLUDE_DIRS 
+        "."
+        "utils"
+        "utils/CLI"
+        "utils/ADC"
+        "utils/CAN"
+        "utils/TempSensor"
+        "utils/AD5693"
+        "../TestCases"
+    REQUIRES
+        console
+        nvs_flash
+        driver
+        esp_adc
+        fatfs
+        vfs
+        esp_timer
+        spi_flash
+        esp_hw_support
+        esp_system
+)

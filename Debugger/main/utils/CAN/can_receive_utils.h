@@ -4,6 +4,11 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 
+/**
+ * @brief Task to receive and process CAN messages.
+ *
+ * @param pvParameters Task parameters (not used).
+ */
 void can_receive_task(void *pvParameters);
 
-#endif
+#endif // CAN_RECEIVE_UTILS_H

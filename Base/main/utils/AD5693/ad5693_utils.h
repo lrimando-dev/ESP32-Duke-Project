@@ -5,11 +5,12 @@
 #define AD5693_UTILS_H
 
 #include <stdint.h>
+#include "esp_err.h"
 
 // Function to initialize the DAC
-void dac_init(void);
+esp_err_t dac_init(void);
 
 // Function to set the output value of the DAC
-void dac_set_value(uint16_t value);
+esp_err_t dac_set_output(uint8_t address, uint16_t value);
 
 #endif // AD5693_UTILS_H
